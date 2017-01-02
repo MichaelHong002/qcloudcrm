@@ -45,15 +45,14 @@
 		});
 
 		function readNameCard(id) {
-			var server_Id = "";
 			wx.uploadImage({ // 上传到微信的媒体服务器
 			    localId: id, // 需要上传的图片的本地ID，由chooseImage接口获得
 			    isShowProgressTips: 1, // 默认为1，显示进度提示
 			    success: function (res) {
 			    	$.showPreloader('识别中');
-					server_Id = res.serverId; 
+					var serverId = res.serverId; 
 					// 返回图片的服务器端ID
-			        $.post("<?=App::PR('Mobcustomerdata','ocr')?>", {sid: server_Id}, function(data) {
+			        $.post("<?=App::PR('Mobcustomerdata','ocr')?>", {media_id: serverId}, function(data) {
 						if (data['result_list']==""){
 							alert('图片识别失败');
 						}else{

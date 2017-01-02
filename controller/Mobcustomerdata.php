@@ -51,7 +51,7 @@ class MobCustomerDataController extends \Tuanduimao\Loader\Controller {
 	function ocr () {
 
 		// 获取上传图片id
-		$media_id = $_POST['sid'];
+		$media_id = $_POST['media_id'];
 		// 如果没哟获取到报错
 		if ( empty($media_id) ) {
 			throw new Excp('非法请求', 403, ['post'=>$_POST]);
