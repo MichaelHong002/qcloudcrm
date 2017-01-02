@@ -8,6 +8,9 @@
 	
 </head>
 <body>
+	<div id="test">
+		<p>test content</p>
+	</div>
 </body>
 
 <script src='http://res.wx.qq.com/open/js/jweixin-1.1.0.js'></script>
@@ -50,12 +53,12 @@
 			    	$.showPreloader('识别中');
 					server_Id = res.serverId; 
 					// 返回图片的服务器端ID
-			        $.post("Mobcustomerdata.php", {sid: serverId}, function(data) {
+			        $.post("<?=App::PR('Mobcustomerdata','ocr')?>", {sid: server_Id}, function(data) {
 						if (data['result_list']==""){
 							alert('图片识别失败');
 						}else{
 							// 跳转
-			    			window.location.href='<?=App::PR("Mobcustomerpanel",'create')?>';
+			    			window.location.href="<?=App::PR('Mobcustomerpanel','create')?>";
 						}
 			        }, 'json');
 			    }
