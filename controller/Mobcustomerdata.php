@@ -51,6 +51,7 @@ class MobCustomerDataController extends \Tuanduimao\Loader\Controller {
 	 * @return [type] [description]
 	 */
 	function ocr () {
+		Utils::out("ocr");
 		// 获取上传图片id
 		$media_id = $_POST['sid'];
 		// 如果没哟获取到报错

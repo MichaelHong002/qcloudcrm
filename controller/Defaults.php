@@ -12,12 +12,7 @@ class DefaultsController extends \Tuanduimao\Loader\Controller {
 	}
 
 	function test() {
-		$we = new Wechat([
-			'appid'=>'wx60ba50125346e3e6',
-			'secret'=>'4b07bfa8380ac3a7630206547faaf69f'
-		]);
-		$data = $we->getSignature();
-		Utils::out("\n", $data, "\n");
+		echo "test";
 	}
 
 	function index() {
