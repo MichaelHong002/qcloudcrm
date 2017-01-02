@@ -7,7 +7,7 @@ use \Tuanduimao\Conf as Conf;
 use \Tuanduimao\Model as Model;
 use \Tuanduimao\Loader\App as App;
 use \Tuanduimao\Wechat as Wechat;
-
+print_r($_POST['media_id']);
 /**
  * 客户数据
  */
