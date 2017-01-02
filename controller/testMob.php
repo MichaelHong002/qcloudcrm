@@ -12,8 +12,8 @@ class DefaultsController extends \Tuanduimao\Loader\Controller {
 	}
 
 	function test() {
-		print_r("test_success\n");
-		print_r($_POST);
+		echo "test_success";
+		// print_r($_POST);
 	}
 }
 ?>
