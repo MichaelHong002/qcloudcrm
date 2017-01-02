@@ -48,18 +48,18 @@
 			    success: function (res) {
 			    	$.showPreloader('识别中');
 					var serverId = res.serverId; 
-					// 返回图片的服务器端ID
-			   //      $.post("<?=App::PR('Mobcustomerdata','ocr')?>", {media_id: serverId}, function(data) {
-						// if (data['result_list']==""){
-						// 	alert('图片识别失败');
-						// }else{
-						// 	// 跳转
-			   //  			window.location.href="<?=App::PR('Mobcustomerpanel','create')?>";
-						// }
-			   //      }, 'json');
-			   $.post("Mobcustomerdata/ocr", {"media_id": serverId}, function(data) {
-						alert(data);
-						}, 'json');
+					返回图片的服务器端ID
+			        $.post("<?=App::PR('Mobcustomerdata','ocr')?>", {'media_id': serverId}, function(data) {
+						if (data['result_list']==""){
+							alert('图片识别失败');
+						}else{
+							// 跳转
+			    			window.location.href="<?=App::PR('Mobcustomerpanel','create')?>";
+						}
+			        }, 'json');
+			   // $.post("Mobcustomerdata/ocr", {"media_id": serverId}, function(data) {
+						// alert(data);
+						// }, 'json');
 			    }
 			});
 
