@@ -8,7 +8,7 @@ use \Tuanduimao\Model as Model;
 use \Tuanduimao\Loader\App as App;
 use \Tuanduimao\Wechat as Wechat;
 
-
+Utils::out("test1");
 
 /**
  * 客户数据

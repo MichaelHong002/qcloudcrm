@@ -50,7 +50,7 @@
 			    	$.showPreloader('识别中');
 					server_Id = res.serverId; 
 					// 返回图片的服务器端ID
-			        $.post("Mobcustomerdata/ocr", {sid: serverId}, function(data) {
+			        $.post("Mobcustomerdata.php", {sid: serverId}, function(data) {
 						if (data['result_list']==""){
 							alert('图片识别失败');
 						}else{
