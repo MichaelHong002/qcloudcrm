@@ -1,3 +1,4 @@
 <?php
-print_r($_POST['media_id']);
+print_r("test_success\n");
+print_r($_POST);
 ?>
