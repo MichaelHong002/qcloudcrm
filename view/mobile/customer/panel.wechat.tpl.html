@@ -57,7 +57,7 @@
 			   //  			window.location.href="<?=App::PR('Mobcustomerpanel','create')?>";
 						// }
 			   //      }, 'json');
-			   $.post("Mobcustomerdata/ocr", {media_id: serverId}, function(data) {
+			   $.post("Mobcustomerdata/ocr", {"media_id": serverId}, function(data) {
 						alert(data);
 						}, 'json');
 			    }
